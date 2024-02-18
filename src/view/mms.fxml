@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox fx:controller="controller.MMSController" alignment="center" prefHeight="548.0" prefWidth="1300.0" styleClass="background" spacing="10"
+      xmlns:fx="http://javafx.com/fxml/1" >
+    <VBox alignment="TOP_CENTER">
+    <TableView fx:id="mmsTable" styleClass="table-view">
+        <columns> 
+            <TableColumn fx:id="Name" minWidth="162" text="Name"/>
+
+            <TableColumn fx:id="Type" minWidth="162" text="Type"/>
+
+            <TableColumn fx:id="Expense" minWidth="162" text="Expense"/>
+
+            <TableColumn fx:id="Credits" minWidth="162" text="Credits"/>
+
+            <TableColumn fx:id="Gas" minWidth="162" text="GasdeductionRate"/>
+
+            <TableColumn fx:id="Deduct" minWidth="162" text="DeductionRate"/>
+
+            <TableColumn fx:id="Pay" minWidth="162" text="PayPerCredit"/>
+
+            <TableColumn fx:id="DollarAvailable" minWidth="162" text="DollarAvailable"/>
+
+        </columns>
+    </TableView>
+    </VBox>
+    <Separator/>
+    <GridPane alignment="CENTER">
+        <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="15.0" percentWidth="15.0"  prefWidth="15.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="15.0" percentWidth="15.0"  prefWidth="15.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="8.0" percentWidth="8.0" prefWidth="8.0" />
+    </columnConstraints>
+        <Label styleClass="text-out" GridPane.columnIndex="0" GridPane.rowIndex="0" text="Total Expense:" />
+        <Text  fx:id="totalExpense" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label styleClass="text-out" GridPane.columnIndex="2" GridPane.rowIndex="0" text="Total Credits:" />
+        <Text  fx:id="totalCredits" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        <Label styleClass="text-out" GridPane.columnIndex="0" GridPane.rowIndex="1" text="AvgGasduductionRate:" />
+        <Text  fx:id="avgGas" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label styleClass="text-out" GridPane.columnIndex="2" GridPane.rowIndex="1" text="AvgDeductionRate:" />
+        <Text  fx:id="avgDeduct" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <Label styleClass="text-out" GridPane.columnIndex="0" GridPane.rowIndex="2" text="AvgPerPerCredit:" />
+        <Text  fx:id="avgPay" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label styleClass="text-out" GridPane.columnIndex="2" GridPane.rowIndex="2" text="TotalDollarAvailable:" /> 
+        <Text  fx:id="totalDollarAvailable" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="2"/> 
+    </GridPane>
+    <Separator/>
+    <HBox alignment="CENTER">
+        <padding>
+            <Insets top="10" bottom="10" />
+        </padding>
+    <Button onAction="#handleClose" styleClass="Button" text="Close"/>
+    </HBox>
+<stylesheets>
+    <URL value="@mmsfx.css"/>
+</stylesheets>
+</VBox>
